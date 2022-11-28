@@ -1,0 +1,92 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item"  >
+            <a  (click)="filter('marcedes')">
+                 <img   src="https://catalogue.automobile.tn/marques/9.webp?t=7" alt=""  />
+ 
+             </a>
+            </div>
+
+        <div class="item"  >
+           <a  (click)="filter('hyndai')">
+                <img   src="https://catalogue.automobile.tn/marques/216.webp?t=7" alt="" />
+
+            </a>
+           </div>
+        <div class="item">
+          
+            <a (click)="filter('bmw')">
+                <img src="https://catalogue.automobile.tn/marques/3.webp?t=7" alt="" />
+
+            </a>
+        </div>
+        <div class="item">
+            <!-- chery -->
+            <a  (click)="filter('chery')">
+                <img src="https://catalogue.automobile.tn/marques/1544.webp?t=7" alt=""/>
+
+            </a>
+        </div>
+       
+        <div class="item">
+            <!-- peugeot -->
+            <a  (click)="filter('jeep')">
+                <img src=" https://catalogue.automobile.tn/marques/690.webp?t=7" alt=""/>
+
+            </a></div>
+            <div class="item">
+               
+                <a (click)="filter('peugeot')" >
+                    <img src="https://catalogue.automobile.tn/marques/12.webp?t=7" alt=""/>
+    
+                </a></div>
+            <div class="item">
+             
+                <a >
+                    <img src="https://www.automobile.tn/fr/neuf/mercedes-benz" alt=""/>
+    
+                </a></div>
+               
+                        <div class="item">
+                            <a >
+                                <img src="https://catalogue.automobile.tn/marques/6.webp?t=7" alt=""/>
+                
+                            </a>
+                         </div>
+               <div class="item">
+                 <a  (click)="filter('kia')">
+                            <img src=" https://catalogue.automobile.tn/marques/7.webp?t=7" alt=""/>
+
+                </a>
+</div>
+<div class="item">
+       <a >
+        <img src=" https://catalogue.automobile.tn/marques/1246.webp?t=7" alt=""/>
+
+        </a>
+        </div>
+    
+      <div class="item">
+        <a  (click)="filter('toyota')">
+       <img src="https://catalogue.automobile.tn/marques/207.webp?t=7" alt=""/>
+
+        </a>
+      </div>
+          </div>
+           </div>
+ 
+
+ <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterMarque">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.modele}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.nouveau}}</p>
+                <p><strong>Price:</strong> ${{item.prix}}</p>
+                <button class="btn btn-primary" >Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>  
