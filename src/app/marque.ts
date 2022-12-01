@@ -4,5 +4,6 @@ export class Marque { constructor(
     public modele:string,
     public image:string,
     public prix:number,
+    public description:string,
     public nouveau:boolean){}
 }

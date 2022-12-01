@@ -10,6 +10,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { MenuComponent } from './menu/menu.component';
 import { SelectedproduitComponent } from './selectedproduit/selectedproduit.component';
+import { FilterPipe } from './filter.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +22,15 @@ import { SelectedproduitComponent } from './selectedproduit/selectedproduit.comp
     ContactComponent,
     ErreurComponent,
     MenuComponent,
-    SelectedproduitComponent
+    SelectedproduitComponent,
+    FilterPipe,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

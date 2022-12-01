@@ -24,3 +24,7 @@ footer{
    
 
 }
+
+h1{text-align: center;}
+input.ng-valid { border-left: 6px solid green;border-right: 6px solid green; }
+input.ng-invalid { border-left: 6px solid red;border-right: 6px solid red; }

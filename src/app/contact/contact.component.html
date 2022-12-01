@@ -1,12 +1,82 @@
+<div  class="container">
+  <h1 >Inscriver-vous !</h1>
+  <form [formGroup]="FormG" >
+      <div >
+          Nom: <input class="form-control" type="text" formControlName="nom" >
+      </div>
+      <div  *ngIf="nom?.errors?.['required'] && nom?.touched "class="alert alert-danger">
+      Le nom est obligatoire
+       </div>
+       <div *ngIf="nom?.errors?.['pattern'] && nom?.dirty" class="alert alert-info">
+       Le nom est commençait par le majuscule
+        </div>
+  
+  
+      <div>
+          Prénom: 
+          <input class="form-control" type="text" formControlName="prenom">
+      </div>
+      <div *ngIf="prenom?.errors?.['required'] && prenom?.touched "class="alert alert-danger">
+          Le prénom est obligatoire
+           </div>
+      <div *ngIf="prenom?.errors?.['pattern'] && prenom?.dirty" class="alert alert-info">
+              Le prénom est commençait par le majuscule
+           </div>
+      <div>
+           Date De Naissance: 
+             <input class="form-control" type="date" formControlName="datedenais">
+       </div>
+      <div>
+          Adresse: 
+          <input  class="form-control" type="text" formControlName="txtad">
+      </div>
+      <div >
+           Sexe: 
+              <input type="radio" formControlName="sexe" value="Femme">Femme 
+              <input type="radio" formControlName="sexe" value="homme"> Homme
+      </div>
+      <div>
+          N° téléphone: 
+          <input class="form-control" type="text" formControlName="tel">
+      </div>
+      <div>
+          Email: 
+          <input class="form-control" type="mail" formControlName="mail">
+      </div>
+      <div *ngIf="email?.invalid && email?.touched "class="alert alert-danger">
+          L'Email est obligatoire
+           </div>
+      <div>
+          Mot de passe: 
+          <input class="form-control"  type="password" formControlName="pass" >
+      </div>
+      <div *ngIf="motPass?.invalid && motPass?.touched "class="alert alert-danger">
+          Le mot de passe est obligatoire
+           </div>
+           <div>
+           <h5>Commentaire:</h5>
+      
+           <!-- <label >  Avez-vous une Remarque </label> -->
+        <input class="form-control" type="text"  formControlName="Commentaire">
+              <!-- <textarea class="form-control"  id="comment" formControlName="Commentaire"></textarea> -->
+            </div>
+        
+  <!-- <button class="btn btn-outline-dark " type="button"(click)="Ajouter()">Ajouter<i class="fa-light fa-message-lines"></i></button> -->
+      <div>
+          <span colspan="2"><input  type="submit"   class="btn btn-outline-success m "  value="Creer votre compte" [disabled]="FormG.invalid" (click)="onAjouter()" >  </span>
+             <input  type="reset"   class="btn btn-outline-danger " (click)="onReset()" value="reinisialier">  
+      </div>
+
+
+    </form>
+  </div>
+  
+ 
+  
+<!-- 
 <footer >  
-    <!-- <div class="row">
-     <h3>PLANET CAR</h3>
-    </div> -->
-    <!-- Grid container -->
     <div class="col">
-      <!-- Section: Social media -->
       <section class="mb-4"> 
-        <!-- Facebook -->
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #3b5998;"
@@ -15,7 +85,7 @@
           ><i class="fab fa-facebook-f"></i
         ></a> 
   
-        <!-- Twitter -->
+       
          <a
           class="btn text-white btn-floating m-1"
           style="background-color: #55acee;"
@@ -24,7 +94,6 @@
           ><i class="fab fa-twitter"></i
         ></a> 
 
-        <!-- Google -->
          <a
           class="btn text-white btn-floating m-1"
           style="background-color: #dd4b39;"
@@ -33,7 +102,7 @@
           ><i class="fab fa-google"></i
         ></a>
   
-        <!-- Instagram -->
+
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #ac2bac;"
@@ -42,7 +111,7 @@
           ><i class="fab fa-instagram"></i
         ></a> 
   
-        <!-- Linkedin -->
+   
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #0082ca;"
@@ -50,7 +119,7 @@
           role="button"
           ><i class="fab fa-linkedin-in"></i
         ></a> 
-        <!-- Github -->
+ 
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #333333;"
@@ -59,8 +128,8 @@
           ><i class="fab fa-github"></i
         ></a>
       </section> 
-      <!-- Section: Social media -->
+    
     </div> 
 
 
-</footer>  
+</footer>   -->

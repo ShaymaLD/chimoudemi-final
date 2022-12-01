@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-;
-
 import { Marque } from '../marque';
-import { ApiService } from '../service/api.service';
+import {  ProduitVoitureService } from '../service/produitVoiture.service';
+import { rechercherCarService } from '../service/rechercherCar.service';
+
+
 
 @Component({
   selector: 'app-produits',
@@ -14,10 +15,11 @@ export class ProduitsComponent implements OnInit {
  
   productList !:Marque[] ;
   public filterMarque!: Marque[];
-  constructor(private router:Router,private api:ApiService,private  activatedRoute:ActivatedRoute) { }
+  searchKey!:string;
+  constructor(private router:Router,private prod:ProduitVoitureService,private  rechercher:rechercherCarService,private  activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.api.getProduct()
+    this.prod.getProduct()
     .subscribe(res=>{
       this.productList = res;
       this.filterMarque = res;
@@ -29,8 +31,15 @@ export class ProduitsComponent implements OnInit {
       // });
       console.log(this.productList)
     });
+    this.rechercher.search.subscribe((val:any)=>{
+      this.searchKey = val;
+    })
    
   }
+
+
+
+  
   filter(marque:string){
     this.filterMarque = this.productList
     .filter((a:any)=>{

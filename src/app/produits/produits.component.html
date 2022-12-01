@@ -42,25 +42,20 @@
                 </a></div>
             <div class="item">
              
-                <a >
-                    <img src="https://www.automobile.tn/fr/neuf/mercedes-benz" alt=""/>
+                <a (click)="filter('ford')">
+                    <img src="https://catalogue.automobile.tn/marques/6.webp?t=7" alt=""/>
     
                 </a></div>
                
-                        <div class="item">
-                            <a >
-                                <img src="https://catalogue.automobile.tn/marques/6.webp?t=7" alt=""/>
                 
-                            </a>
-                         </div>
                <div class="item">
                  <a  (click)="filter('kia')">
                             <img src=" https://catalogue.automobile.tn/marques/7.webp?t=7" alt=""/>
 
                 </a>
-</div>
-<div class="item">
-       <a >
+         </div>
+     <div class="item">
+       <a  (click)="filter('suzuki')">
         <img src=" https://catalogue.automobile.tn/marques/1246.webp?t=7" alt=""/>
 
         </a>
@@ -76,17 +71,16 @@
            </div>
  
 
- <div class="container">
-    <div class="row">
-        <ng-container *ngFor="let item of filterMarque">
+
+    <div class="row ">
+        <ng-container *ngFor="let item of filterMarque |filter:searchKey:'marque'">
             <div class="card col-md-3">
                 <img src="{{item.image}}" alt="">
-                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.modele}}</h5>
-                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.nouveau}}</p>
-                <p><strong>Price:</strong> ${{item.prix}}</p>
-                <button class="btn btn-primary" >Add to cart</button>
+            <h5>  <a  [routerLink]="['/produits',item.id]">{{item.modele}}</a></h5>   
+               <div><input type="checkbox"  [checked]="item.nouveau">Nouveau </div> 
+                <p><strong>Price:</strong>{{item.prix}}DT</p>
+              
             </div>
         </ng-container>
 
     </div>
-</div>  

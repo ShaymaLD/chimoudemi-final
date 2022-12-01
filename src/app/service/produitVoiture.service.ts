@@ -9,7 +9,7 @@ const URL=" http://localhost:3000/voiture";
   providedIn: 'root'
 })
 
-export class ApiService {
+export class ProduitVoitureService {
   lamarque!:Marque;
   constructor(private http:HttpClient) { }
   getProduct():Observable<Marque[]>{
