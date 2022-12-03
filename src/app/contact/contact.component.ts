@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Client } from '../Client';
 
-import { AjouterService } from '../service/Client.Service';
+import { ClientService } from '../service/Client.Service';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +13,7 @@ import { AjouterService } from '../service/Client.Service';
 export class ContactComponent implements OnInit {
   FormG!:FormGroup;
   lesReferences!:Client[];
-  constructor( private fb:FormBuilder,private ajouterService:AjouterService ) { }
+  constructor( private fb:FormBuilder,private clientServise:ClientService ) { }
 
   ngOnInit(): void {
     this.FormG=this.fb. nonNullable.group({
@@ -56,7 +56,7 @@ export class ContactComponent implements OnInit {
 // }
 
 onAjouter(){
-  this.ajouterService.addReferences(this.FormG.value)
+  this.clientServise.addReferences(this.FormG.value)
    .subscribe(dd=>this.lesReferences.push(dd));
 }
 

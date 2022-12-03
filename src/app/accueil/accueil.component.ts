@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit {
+  getCar(idcar: number) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() { }
  

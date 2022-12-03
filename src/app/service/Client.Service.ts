@@ -6,7 +6,7 @@ const URL='http://localhost:3000/References';
 @Injectable({
   providedIn: 'root'
 })
-export class AjouterService {
+export class ClientService {
 
   constructor(private http:HttpClient) { }
 

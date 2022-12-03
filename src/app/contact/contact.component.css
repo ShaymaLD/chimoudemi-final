@@ -1,4 +1,4 @@
-footer{
+/* footer{
     width: 100%;
     position: absolute;
     bottom:0;
@@ -8,7 +8,7 @@ footer{
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
-}
+} */
 /*.row{
     width: 85%;
     margin: auto;
@@ -17,14 +17,14 @@ footer{
     align-items: flex-start;
     justify-content: space-between;
 }*/
-.col{ 
+ .col{ 
     flex-basis: 25%;
     padding: 30px;
     text-align: center;
    
 
-}
+} 
 
 h1{text-align: center;}
-input.ng-valid { border-left: 6px solid green;border-right: 6px solid green; }
+input.ng-valid{ border-left: 6px solid green;border-right: 6px solid green; }
 input.ng-invalid { border-left: 6px solid red;border-right: 6px solid red; }

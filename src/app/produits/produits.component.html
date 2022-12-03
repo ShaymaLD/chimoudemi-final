@@ -71,16 +71,18 @@
            </div>
  
 
-
+<div  class="container">
     <div class="row ">
         <ng-container *ngFor="let item of filterMarque |filter:searchKey:'marque'">
             <div class="card col-md-3">
                 <img src="{{item.image}}" alt="">
             <h5>  <a  [routerLink]="['/produits',item.id]">{{item.modele}}</a></h5>   
-               <div><input type="checkbox"  [checked]="item.nouveau">Nouveau </div> 
-                <p><strong>Price:</strong>{{item.prix}}DT</p>
+               <div ><input type="checkbox"  [checked]="item.nouveau" ><i [ngClass]="{' badge text-bg-dark':item.nouveau}">Nouveau</i> </div> 
+                <p><strong>Price: </strong>{{item.prix }}DT</p>
               
             </div>
         </ng-container>
 
     </div>
+</div>
+

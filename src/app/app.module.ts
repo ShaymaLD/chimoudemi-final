@@ -12,6 +12,9 @@ import { MenuComponent } from './menu/menu.component';
 import { SelectedproduitComponent } from './selectedproduit/selectedproduit.component';
 import { FilterPipe } from './filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NouveauVoitureComponent } from './nouveau-voiture/nouveau-voiture.component';
+import { AdminModule } from './admin/admin.module';
+import { AuthentificationComponent } from './authentification/authentification.component';
 
 
 @NgModule({
@@ -24,14 +27,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     SelectedproduitComponent,
     FilterPipe,
+    NouveauVoitureComponent,
+    AuthentificationComponent
+  
+   
+
+  
    
   ],
   imports: [
     BrowserModule,
+    AdminModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

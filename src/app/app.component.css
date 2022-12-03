@@ -1,0 +1,25 @@
+footer{
+    width: 100%;
+    position: relative;
+  
+    bottom:0;
+    background: linear-gradient(to right,#00093c,#141313);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+p{ text-align: center;}
+h4{ text-align: center;}
+.a { margin-left: 100px;}
+.b { margin-left: 120px;}
+.c{ margin-left: 160px;}
+.e{ margin-left: 180px;}
+.col{
+    flex-basis: 25%;
+    padding: 30px;
+    text-align: center;
+
+}

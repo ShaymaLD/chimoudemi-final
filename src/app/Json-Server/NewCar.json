@@ -1,0 +1,60 @@
+{
+  "Nouveau":[
+    {
+      "id":1,
+      "nbCyl":4,
+      "nom":"HYNDAI I20",
+      "energie":"Essence",
+      "puisFis":"5 cv",
+      "puiss":"84 ch",
+      "couple":"122 nm 4000 tr/min",
+      "cyl":"1197 CM³",
+      "img":"../../assets/autoHU.webp"
+    },
+    {
+      "id":2,
+      "nbCyl":3,
+      "nom":"PEUGEOT 308",
+      "energie":"Essence",
+      "puisFis":"7 CV",
+      "puiss":"130 CH",
+      "couple":"230 nm 1750 tr/min",
+      "cyl":"1199 CM³",
+      "img":"../../assets/autoPG.webp"
+    },
+    {
+      "id":3,
+      "nbCyl":4,
+      "nom":"KIA SPORTAGE",
+      "energie":"Essence",
+      "puisFis":"10 CV",
+      "puiss":"180 CH",
+      "couple":"265 nm 1500 tr/min",
+      "cyl":"1598 CM³",
+      "img":"../../assets/autoKI.webp"
+    },
+    
+    {
+      "id":4,
+      "nbCyl":4,
+      "nom":"CHERY TIGGO 8 PRO",
+      "energie":"Essence",
+      "puisFis":"11 CV",
+      "puiss":"197 CH",
+      "couple":"290 nm 2000 tr/min",
+      "cyl":"1598 CM³",
+      "img":"../../assets/autoCher.webp"
+    },
+    {
+      "id":5,
+      "nbCyl":4,
+      "nom":"JEEP COMPASS",
+      "energie":"Essence",
+      "puisFis":"8 CV",
+      "puiss":"150 CH",
+      "couple":"270 nm 1560 tr/min",
+      "cyl":"1332 CM³",
+      "img":"../../assets/autoJE.webp"
+    }
+  ]
+}
