@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="card-top container-fluid">
     <div class="container d-flex">
         <div class="item"  >
@@ -60,22 +61,31 @@
 
         </a>
         </div>
-    
       <div class="item">
         <a  (click)="filter('toyota')">
        <img src="https://catalogue.automobile.tn/marques/207.webp?t=7" alt=""/>
-
         </a>
       </div>
-          </div>
-           </div>
+      </div>
+<div>
+<form class="d-flex" >
+ <div style="margin-left: 80%">
+     <input class="form-control me-2" type="text"  name="input1" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search"> <i class="fas fa-search search-icon"></i>
+    </div>  
+  <button class="btn btn-primary" type="button">Search</button>
+</form>
+</div>
+
+ 
+         
+         
  
 
 <div  class="container">
-    <div class="row ">
+    <div class="row " >
         <ng-container *ngFor="let item of filterMarque |filter:searchKey:'marque'">
-            <div class="card col-md-3">
-                <img src="{{item.image}}" alt="">
+            <div class="card col-md-3" style="width: 500px;margin-left: 100px;">
+                <img src="{{item.image}}" alt="" style="height: 200px;width:350px">
             <h5>  <a  [routerLink]="['/produits',item.id]">{{item.modele}}</a></h5>   
                <div ><input type="checkbox"  [checked]="item.nouveau" ><i [ngClass]="{' badge text-bg-dark':item.nouveau}">Nouveau</i> </div> 
                 <p><strong>Price: </strong>{{item.prix }}DT</p>

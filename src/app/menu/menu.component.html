@@ -8,15 +8,14 @@
           </a>
     </li>
     <li class="nav-item">
-         <a class="nav-link" routerLink='/accueil' routerLinkActive="actif"><i class="fa-solid fa-house" ></i>Accueil</a></li>
+         <a class="nav-link" routerLink='/accueil' routerLinkActive="actif"><i class="fa-solid fa-house" ></i> Accueil</a></li>
     <li class="nav-item">
-         <a class="nav-link" routerLink='/produits'  routerLinkActive="actif"><i class="fa-brands fa-product-hunt"></i>Produit</a></li>
+         <a class="nav-link" routerLink='/produits'  routerLinkActive="actif"><i class="fa-brands fa-product-hunt"></i> Produit</a></li>
     <li class="nav-item">
-         <a class="nav-link" routerLink='/contact'  routerLinkActive="actif"><i class="fa-sharp fa-solid fa-user-plus"></i>Inscription</a></li>
+         <a class="nav-link" routerLink='/contact'  routerLinkActive="actif"><i class="fa-sharp fa-solid fa-user-plus"></i> Inscription</a></li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink='/proposDeNous'  routerLinkActive="actif"><i class="fa-solid fa-users"></i> A propos de nous</a></li>
 </ul>
-<form class="d-flex">
- <div> <input class="form-control me-2" type="text"  name="input1" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search"> <i class="fas fa-search search-icon"></i></div>  
-    <button class="btn btn-primary" type="button">Search</button>
-  </form>
+
 </div>
 </nav>

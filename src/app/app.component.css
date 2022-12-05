@@ -5,7 +5,7 @@ footer{
     bottom:0;
     background: linear-gradient(to right,#00093c,#141313);
     color: #fff;
-    padding: 100px 0 30px;
+    padding: 20px 0 10px;
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
@@ -18,8 +18,12 @@ h4{ text-align: center;}
 .c{ margin-left: 160px;}
 .e{ margin-left: 180px;}
 .col{
-    flex-basis: 25%;
-    padding: 30px;
+   
     text-align: center;
 
+}
+.row{
+    margin-left: 30px;
+    height: 100px;
+    width: 200px;
 }

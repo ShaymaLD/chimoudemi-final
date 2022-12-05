@@ -2,8 +2,8 @@
   "Admin": [
     {
       "id": 1,
-      "login": "chimou",
-      "pwd": "chimou"
+      "username": "chimou",
+      "password": "chimou"
     }
   ]
 }

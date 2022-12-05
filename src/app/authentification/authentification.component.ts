@@ -19,17 +19,17 @@ export class AuthentificationComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.fb.nonNullable.group({
-      login:['', Validators.required],
+      username:['', Validators.required],
       password:['', Validators.required]
     })
-    this.tabadmin$=this.auth. getAdmin();
+  //  this.tabadmin$=this.auth. getAdmin();
   }
   
   onSubmit(){
-    this.auth.login(this.loginForm.value['login'] ,this.loginForm.value ['password']).subscribe(
+    this.auth.login(this.loginForm.value['username'] ,this.loginForm.value ['password']).subscribe(
       Admin=>{
-        if (Admin.length=0){
-          this.message="echec";
+        if (Admin.length==0){
+          alert("echec");
           this.loginForm.reset();
         }
         else 

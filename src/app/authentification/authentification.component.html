@@ -1,11 +1,12 @@
 <h3>Authentification </h3>
 <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
-    <div *ngIf="message">
+    <div  *ngIf="message">
         {{message}}
     </div>
     <label>Login</label>
-    <input type="text" formControlName="login"> <br>
+    <input class="form-control form-control-lg" type="text" formControlName="username" >
+     <br>
     <label>Mot de passe</label>
-    <input type="password" formControlName="password"><br>
-    <button [disabled]="loginForm.invalid">S'authentifier</button>
+    <input class="form-control form-control-lg" type="password" formControlName="password"><br>
+    <button class="btn btn-outline-primary">S'authentifier</button>
 </form>

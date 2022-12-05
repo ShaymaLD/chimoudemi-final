@@ -1,19 +1,27 @@
-<div class="granddiv">
+
+
     
-    <div  class="row" style="margin-bottom:3px " style="margin-left:600px"  >
-    <ul class="gdiv list-group list-group-horizontal">
-    <li  class="col-sm-s">
-    <div class="card box image" style="width : 25rem;height : 25rem">
-        <img [src]="voiture.image" class="card-img-top p-2" height="250px" width="900px" />
-    <h4  class="card-title v"> {{voiture.modele}}</h4>
-    <p class="card-title v"><strong> Prix: </strong>{{ voiture.prix | number :"0.3" }} DT </p>
-    <p class="card-title v"><strong>Marque: </strong>{{ voiture.marque  }} </p>
-    {{voiture.description}}
+<div class="container">
+    <div class="card" style="width: 2000px;">
+      <img style="height:350px ;width:550px;margin-left: 100px;"  [src]="voiture.image" class="img-fluid rounded-start" alt="...">
+      <div class="card-body" style="text-align: center;">
+        <h4  class="card-text"> {{voiture.modele}}</h4>
+        <p class="card-text"><strong> Prix: </strong>{{ voiture.prix | number :"0.3" }} DT </p>
+    <p class="card-text"><strong>Marque: </strong>{{ voiture.marque  }} </p>
+        <h5 class="card-title">FICHE TECHNIQUE</h5>
+        <br>
+        <!-- <h6 class="card-text" >{{Car.nom}}</h6><br><br>
+        <p class="card-text" >NOMBRE DE CYLINDRES : <strong >{{Car.nbCyl}}</strong></p><br><br>
+        <p class="card-text">ENERGIE : <strong >{{Car.energie}}</strong></p><br><br>
+        <p class="card-text">PUISSANCE FISCALE : <strong > {{Car.puisFis}}</strong></p><br><br>
+        <p class="card-text">PUISSANCE (CH.DIN) : <strong >{{Car.puiss}}</strong></p><br><br>
+        <p class="card-text">COUPLE : <strong >{{Car.couple}}</strong></p><br><br>
+        <p class="card-text">CYLINDRÉE : <strong>{{Car.cyl}}</strong></p>-->
+      </div>
+    </div> 
+    <div>
+      <a routerLink='/produits' routerLinkActive="actif" class="btn btn-outline-info"><h5>Return</h5></a>
+    </div>
+    </div>
     
-    <!-- <p class="card-title v"> Date de creation:{{ select. datecreation }} </p> -->
-   <!-- <div class="card-title v">  en stock <input  type="checkbox" [checked]="select.enstock">  </div> -->
-    </div>
-    </li>
-    </ul>
-    </div>
-    </div>
+    

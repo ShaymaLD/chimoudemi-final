@@ -1,23 +1,21 @@
+
 <div class="container">
-    <div class="card mb-3" style="width: 1000px;height: 700px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img style="height:500px ;width:600px" [src]="Car.img" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">FICHE TECHNIQUE</h5>
-              <br>
-              <h6 class="card-text" >{{Car.nom}}</h6><br><br>
-              <p class="card-text" >NOMBRE DE CYLINDRES : <strong style="margin-left: 400px;">{{Car.nbCyl}}</strong></p><br><br>
-              <p class="card-text">ENERGIE : <strong style="margin-left: 400px;">{{Car.energie}}</strong></p><br><br>
-              <p class="card-text">PUISSANCE FISCALE : <strong style="margin-left: 400px;"> {{Car.puisFis}}</strong></p><br><br>
-              <p class="card-text">PUISSANCE (CH.DIN) : <strong style="margin-left: 400px;">{{Car.puiss}}</strong></p><br><br>
-              <p class="card-text">COUPLE : <strong style="margin-left: 400px;">{{Car.couple}}</strong></p><br><br>
-              <p class="card-text">CYLINDRÉE : <strong style="margin-left: 400px;">{{Car.cyl}}</strong></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a routerLink='/accueil' routerLinkActive="active" class="btn btn-outline-info"><h5>Return</h5></a>
+<div class="card" style="width: 100rem;">
+  <img style="height:500px ;width:800px;margin-left: 20rem;" [src]="Car.img" class="img-fluid rounded-start" alt="...">
+  <div class="card-body" style="text-align: center;">
+    <h5 class="card-title">FICHE TECHNIQUE</h5>
+    <br>
+    <h6 class="card-text" >{{Car.nom}}</h6><br><br>
+    <p class="card-text" >NOMBRE DE CYLINDRES : <strong >{{Car.nbCyl}}</strong></p><br><br>
+    <p class="card-text">ENERGIE : <strong >{{Car.energie}}</strong></p><br><br>
+    <p class="card-text">PUISSANCE FISCALE : <strong > {{Car.puisFis}}</strong></p><br><br>
+    <p class="card-text">PUISSANCE (CH.DIN) : <strong >{{Car.puiss}}</strong></p><br><br>
+    <p class="card-text">COUPLE : <strong >{{Car.couple}}</strong></p><br><br>
+    <p class="card-text">CYLINDRÉE : <strong>{{Car.cyl}}</strong></p>
+  </div>
 </div>
+<div>
+  <a routerLink='/accueil' routerLinkActive="active" class="btn btn-outline-info"><h5>Return</h5></a>
+</div>
+</div>
+

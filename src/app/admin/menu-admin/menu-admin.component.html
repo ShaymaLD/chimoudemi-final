@@ -1,1 +1,16 @@
-<p>menu-admin works!</p>
+<nav class="navbar navbar-expand-sm bg-black navbar-black ">
+    <div class="container-fluid">
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="navbar-brand" href="#">
+            <img src="assets\Logo.png" alt="Avatar Logo" style="width:150px;"> 
+          </a>
+    </li>
+<li class="nav-item">
+    <a class="nav-link" routerLink='home' routerLinkActive="actif"><i class="fa-solid fa-house" ></i>home</a></li>
+<li class="nav-item">
+    <a class="nav-link" routerLink='nosProduit'  routerLinkActive="actif"><i class="fa-brands fa-product-hunt"></i>Produit</a></li>
+    <li class="nav-item">
+        <button  (click)="onClick()"  class="btn btn-outline-danger">Déconnexion</button></li>
+    
+</ul>

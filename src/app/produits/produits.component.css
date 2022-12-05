@@ -39,3 +39,10 @@
     transition: 0.3s ease-in-out;
     transform: scale(1.2);
 }
+ .search-icon {
+    position: absolute;
+    z-index: 10;
+    right: 7%;
+    top: 100px;
+    color: blue;
+} 

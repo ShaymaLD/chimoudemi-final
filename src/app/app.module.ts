@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NouveauVoitureComponent } from './nouveau-voiture/nouveau-voiture.component';
 import { AdminModule } from './admin/admin.module';
 import { AuthentificationComponent } from './authentification/authentification.component';
+import { ProposDeNousComponent } from './propos-de-nous/propos-de-nous.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AuthentificationComponent } from './authentification/authentification.c
     SelectedproduitComponent,
     FilterPipe,
     NouveauVoitureComponent,
-    AuthentificationComponent
+    AuthentificationComponent,
+    ProposDeNousComponent
   
    
 

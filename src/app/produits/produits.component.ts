@@ -12,7 +12,8 @@ import { rechercherCarService } from '../service/rechercherCar.service';
   styleUrls: ['./produits.component.css']
 })
 export class ProduitsComponent implements OnInit {
- 
+  public searchTerm !: string;
+  totalItem!:number;
   productList !:Marque[] ;
   public filterMarque!: Marque[];
   searchKey!:string;
@@ -23,20 +24,30 @@ export class ProduitsComponent implements OnInit {
     .subscribe(res=>{
       this.productList = res;
       this.filterMarque = res;
-      // this.productList.forEach((a:any) => {
-      //   if(a.category ==="women's clothing" || a.category ==="men's clothing"){
-      //     a.category ="fashion"
-      //   }
-      //   Object.assign(a,{quantity:1,total:a.price});
-      // });
+     
+
+
+
+
+
       console.log(this.productList)
     });
+    this.rechercher.getProducts()
+    .subscribe(res=>{
+      this.totalItem = res.length;
+    })
+   
     this.rechercher.search.subscribe((val:any)=>{
       this.searchKey = val;
     })
    
   }
-
+  search(event:any){
+    this.searchTerm = (event.target as HTMLInputElement).value;
+    console.log(this.searchTerm);
+    this.rechercher.search.next(this.searchTerm);
+  }
+ 
 
 
   

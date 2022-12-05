@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NouveauV } from '../nouveau-v';
-const URL =" http://localhost:3000/Nouveau";
+const URL =" http://localhost:4200/Nouveau";
 @Injectable({
   providedIn: 'root'
 })
